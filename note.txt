@@ -1,0 +1,3 @@
+có thể chia nhỏ các file ra 
+có 1 file layel dể viết thêm dữ liệu
+1 cái home chính để dữ liệu 
