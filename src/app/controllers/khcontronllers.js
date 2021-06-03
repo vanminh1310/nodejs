@@ -7,6 +7,7 @@ class Khoahoc{
         .then(blog=>{
             res.render('khoahoc',
               {
+                //   lay mot truong
                 blog:mongooseToObject(blog)
               })
             })
