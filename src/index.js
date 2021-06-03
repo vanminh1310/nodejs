@@ -4,7 +4,8 @@ const express = require("express"); // thu vien
 const exphbs = require("express-handlebars");
 const app = express(); // nayf la 1 cai ham
 const route = require("./routes");
-const db = require('./config/db/index')
+const db = require('./config/db/index');
+const { post } = require("./routes/news");
 const port = 3000;
 
 
@@ -41,6 +42,6 @@ console.log(__dirname);
 
 route(app);
 
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
