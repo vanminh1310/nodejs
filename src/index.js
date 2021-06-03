@@ -4,13 +4,13 @@ const express = require("express"); // thu vien
 const exphbs = require("express-handlebars");
 const app = express(); // nayf la 1 cai ham
 const route = require("./routes");
-const db = require('./config/db/index');
+//const db = require('./config/db/index');
 const { post } = require("./routes/news");
 const port = 3000;
 
 
 // connect to db
-db.connect();
+//db.connect();
 
 // dinh nghia route
 app.use(express.static(path.join(__dirname, "public"))); // tao duong dan den thu muc public file tinh
