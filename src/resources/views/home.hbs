@@ -1,3 +1,23 @@
-{{!-- nay la noi dung cua no --}}
+{{! nay la noi dung cua no }}
+<div class="mt-5">
+    <div class="row">
+        {{#each blog}}
+        <div class="col-sm-3 clo-lg-4">
+            <div class="card" style="width: 20rem; margin-left: 2vw; margin-top: 2vh;">
+                <a href="/khoa-hoc/{{this.slug}}">
+                    <img src="{{this.img}}" class="card-img-top" style="hight:20vh" ; alt="..." />
+                </a>
+                <div class="card-body">
+                    <a href="/khoa-hoc/{{this.slug}}">
+                        <h5 class="card-title">{{this.name}}</h5>
+                    </a>
+                    <p class="card-text">{{this.nd}}</p>
+                    <a href="#" class="btn btn-primary">Học Ngay</a>
+                </div>
+            </div>
+        </div>
 
-<p>Yêu em </p>
+        {{/each}}
+
+    </div>
+</div>
