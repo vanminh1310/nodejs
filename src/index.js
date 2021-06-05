@@ -4,13 +4,19 @@ const express = require("express"); // thu vien
 const exphbs = require("express-handlebars");
 const app = express(); // nayf la 1 cai ham
 const route = require("./routes");
-//const db = require('./config/db/index');
-const { post } = require("./routes/news");
+const db = require('./config/db/index');
+var server = require("http").createServer(app);
+var io = require("socket.io")(server);
+
+
+
+const {
+  post
+} = require("./routes/news");
 const port = 3000;
-
-
+var bodyParser = require('body-parser')
 // connect to db
-//db.connect();
+db.connect();
 
 // dinh nghia route
 app.use(express.static(path.join(__dirname, "public"))); // tao duong dan den thu muc public file tinh
@@ -24,8 +30,7 @@ app.engine(
   })
 ); // sua lai duoi
 
-
-
+// 
 
 app.use(
   express.urlencoded({
@@ -34,14 +39,16 @@ app.use(
 );
 app.use(express.json());
 
-app.set("views", path.join(__dirname, "resources","views"));
+app.set("views", path.join(__dirname, "resources", "views"));
 app.set("view engine", "hbs");
 console.log(__dirname);
 
-// route init
+// soket
 
+// route init
 route(app);
 
-app.listen(process.env.PORT||port, () => {
+
+app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });

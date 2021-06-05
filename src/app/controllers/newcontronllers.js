@@ -2,6 +2,9 @@ class NewContronller{
 
     index(req, res){
         res.render('new');
+        res.send('test')
+       
+
     }
 }
 

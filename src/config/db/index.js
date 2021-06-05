@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 // phai cos async moi chay duoc
 async function connect() {
     try {
-        await mongoose.connect('mongodb://localhost:27017/blog_dev', {
+        await mongoose.connect('mongodb+srv://vanminh3:1234@blog.cggar.mongodb.net/blog?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useFindAndModify: false,

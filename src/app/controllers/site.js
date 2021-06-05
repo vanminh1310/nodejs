@@ -1,7 +1,5 @@
 const { mutipleMongooseToObject } = require('../../util/mongoose')
 const Blog = require('../model/nd')
-
-
 class homeContronller{
 
     home(req, res,next){
