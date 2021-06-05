@@ -1,36 +1,57 @@
 {{! nay la noi dung cua no }}
+{{!-- <meta http-equiv="refresh" content="1"> --}}
 <div class="mt-5">
     <div class="row">
-
         {{#each esp}}
         <div class="col-sm-3 clo-lg-4">
-            <div class="card" style="width: 20rem; margin-left: 2vw; margin-top:
-                2vh;">
-                {{!-- <a href="/khoa-hoc/{{this.slug}}"> --}}
-                    {{!-- <img src="{{this.img}}" class="card-img-top"
-                        style="hight:20vh" ; alt="..." /> --}}
-                    {{!-- </a> --}}
+            <div class="card" style="width: 20rem; margin-left: 25vw; margin-top:2vh;">
                 <div class="card-body">
-                    {{!-- <a href="/khoa-hoc/{{this.slug}}"> --}}
-                        <h5 class="card-title">{{this.name}}</h5>
-                    </a>
-                    <p class="card-text">{{this.sensor}}</p>
-                    <a href="#" class="btn btn-primary">Học Ngay</a>
+                        <h5 class="card-title">Giá trị 1: <Strong>{{this.name}}</Strong></h5>
+                    
+                    <h5 class="card-text">Giá trị 2: <Strong>{{this.sensor}}</Strong></h5>
+                  
                 </div>
             </div>
         </div>
-
         {{/each}}
-
-
-
     </div>
 </div>
 
+<div>
+<div class="container-fluid" >
+      <h3>Thử nghiệm</h3>
+      <hr>
+      <div class="row">
+         <div class="col-4">
+            <nav id="myScrollspy">
+               <ul class="nav nav-pills flex-column">
+                  <li class="nav-item"><a class="nav-link" href="#content1">Nội dung</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#content2">Hướng dẫn</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#content3">Kết thúc</a></li>
+               </ul>
+            </nav>
+         </div>
+         <div class="col-8">
+            <div data-spy="scroll" data-target="#myScrollspy" data-offset="10"
+                  style="height:50vh;overflow-y: scroll;padding:5px; border: 1px solid #ccc;">
+               <h4 id="content1">Nội dung</h4>
+               <p>
+                   Mục này tạo ra để test HTTP Protocol dùng cho việc truyền tải dữ liệu từ client server  và lưu dữ liệu vào database.
+                   Cho nhiều mục đích khác nhau như trong IoT ...
+               </p>
+               <h4 id="content2">Hướng dẫn</h4>
+               <p>
+                   Có thể dùng phần cứng là ESP32 or dùng PostMan để thực hiện việc gửi các giá trị lên sever qua API: https://ioy.herokuapp.com/esp32 dữ liệu sẽ được cập nhật lên server đồng thời được lưu vào database.
 
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">{{dataaa}}</h5>
-        
-    </div>
+               </p>
+               <h4 id="content3">Kết luận</h4>
+               <p>
+                Còn nhiều thứ phải cải thiện thêm. 
+               </p>
+            </div>
+         </div>
+       </div>
 </div>
+
+
+

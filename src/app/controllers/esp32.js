@@ -2,18 +2,17 @@ const { mutipleMongooseToObject } = require('../../util/mongoose')
 const Blog = require('../model/nd')
 const Esp = require('../model/esp')
 
-class espContronller{
+ class espContronller{
 
-  home(req, res,next){
+ home(req, res,next){
         // ham lay du lieu tu database
            Esp.find().sort({'_id':-1}).limit(1) // lấy dữ liệu mới nhâts 
             // .then(blog=>res.render('home',{blog}))
             .then(esp=> {
-             // blog = blog.map(blog=>blog.toObject())
+              
               res.render('esp32',
               {
                 esp:mutipleMongooseToObject(esp),
-            
               }
               )
             })
@@ -27,6 +26,10 @@ class espContronller{
         esp32.save()
         console.log(esp32) 
     }
+
+    // 
+ 
 }
+
 // khoi tao 
 module.exports = new espContronller;
