@@ -6,6 +6,7 @@ const app = express(); // nayf la 1 cai ham
 const route = require("./routes");
 const db = require('./config/db/index');
 var server = require("http").createServer(app);
+var methodOverride = require('method-override')
 var io = require("socket.io")(server);
 
 
@@ -22,13 +23,18 @@ db.connect();
 app.use(express.static(path.join(__dirname, "/public"))); // tao duong dan den thu muc public file tinh
 // http logger
 app.use(morgan("combined"));
+// 
+app.use(methodOverride('_method'))
 // template logger
 app.engine(
-  "hbs",
+  'hbs',
   exphbs({
-    extname: ".hbs",
-  })
-); // sua lai duoi
+      extname: '.hbs',
+      helpers: {
+          sum: (a, b) => a + b,
+      },
+  }),
+);// sua lai duoi
 
 // 
 
