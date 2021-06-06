@@ -1,12 +1,52 @@
-<div class="mt-4 hi">
+<div style="margin-bottom: 0vh;" >
+<div class="mt-4 ">
     <form>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nhập từ khóa</label>
             <input type="text" name="q" class="form-control" id="exampleInputEmail1"
                 aria-describedby="emailHelp">
-           
         </div>
        
         <button type="submit" class="btn btn-primary">Seach</button>
     </form>
+
+    <div>
+<div class="container-fluid" >
+      <h3>Thử nghiệm</h3>
+      <hr>
+      <div class="row">
+         <div class="col-4">
+            <nav id="myScrollspy">
+               <ul class="nav nav-pills flex-column">
+                  <li class="nav-item"><a class="nav-link" href="#content1">Nội dung</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#content2">Hướng dẫn</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#content3">Kết thúc</a></li>
+               </ul>
+            </nav>
+         </div>
+         <div class="col-8">
+            <div data-spy="scroll" data-target="#myScrollspy" data-offset="10"
+                  style="height:50vh;overflow-y: scroll;padding:5px; border: 1px solid #ccc;">
+               <h4 id="content1">Nội dung</h4>
+               <p>
+                   Mục này tạo ra để test HTTP Protocol dùng cho việc truyền tải dữ liệu từ client server  và lưu dữ liệu vào database.
+                   Cho nhiều mục đích khác nhau như trong IoT ...
+               </p>
+               <h4 id="content2">Hướng dẫn</h4>
+               <p>
+                   Có thể dùng phần cứng là ESP32 or dùng PostMan để thực hiện việc gửi các giá trị lên sever qua API: https://ioy.herokuapp.com/esp32 dữ liệu sẽ được cập nhật lên server đồng thời được lưu vào database.
+
+               </p>
+               <h4 id="content3">Kết luận</h4>
+               <p>
+                Còn nhiều thứ phải cải thiện thêm. 
+               </p>
+            </div>
+         </div>
+       </div>
+</div>
+</div>
+</div>
+<br>
+<br>
 </div>
