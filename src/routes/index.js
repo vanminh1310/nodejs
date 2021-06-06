@@ -9,7 +9,7 @@ const creat = require('../routes/Creat')
       app.use('/creat', creat);
       app.use('/socket', socket);
        app.use('/esp32', esp);
-       app.use('/khoa-hoc', newKH);
+       app.use('/content', newKH);
        app.use('/new', newRouter);
        app.use('/home', newsite);
        app.use('/', newsite)

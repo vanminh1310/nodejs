@@ -2,9 +2,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const blog = new Schema({
-    name: { type: String},
+    title: { type: String},
     nd: { type: String },
     img: { type: String },
+    slug: { type: String },
+    content: { type: String },
     creatdate: { type: Date, default: Date.now },
     update: { type: Date, default: Date.now },
   

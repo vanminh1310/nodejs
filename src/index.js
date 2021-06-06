@@ -19,7 +19,7 @@ var bodyParser = require('body-parser')
 db.connect();
 
 // dinh nghia route
-app.use(express.static(path.join(__dirname, "public"))); // tao duong dan den thu muc public file tinh
+app.use(express.static(path.join(__dirname, "/public"))); // tao duong dan den thu muc public file tinh
 // http logger
 app.use(morgan("combined"));
 // template logger
