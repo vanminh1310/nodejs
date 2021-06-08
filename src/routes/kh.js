@@ -4,7 +4,7 @@ const router = express.Router()
 
 
 
-router.get('/:slug',khcontronllers.show)
+router.get('/:id',khcontronllers.show)
 
 
 module.exports = router

@@ -3,7 +3,7 @@ const Blog = require('../model/nd')
 class Khoahoc{
     show(req, res,next){
         // res.render('new');
-        Blog.findOne({slug: req.params.slug})
+        Blog.findById(req.params.id)
         .then(blog=>{
             res.render('khoahoc',
               {
