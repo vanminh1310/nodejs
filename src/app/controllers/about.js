@@ -1,7 +1,7 @@
 class NewContronller{
 
     index(req, res){
-        res.render('new');
+        res.render('about');
     }
 }
 

@@ -19,6 +19,52 @@ class homeContronller{
 
        // res.render('home');
     }
+// 
+    cuocsong(req, res,next){
+        
+      // ham lay du lieu tu database
+         Blog.find({slug:"cuocsong"})
+          // .then(blog=>res.render('home',{blog}))
+          .then(blog => {
+           // blog = blog.map(blog=>blog.toObject())
+            res.render('cuocsong',
+            {
+              blog:mutipleMongooseToObject(blog)
+            })
+          })
+          .catch(next)
+  }
+  // 
+  khampha(req, res,next){
+        
+    // ham lay du lieu tu database
+       Blog.find({slug:"khampha"})
+        // .then(blog=>res.render('home',{blog}))
+        .then(blog => {
+         // blog = blog.map(blog=>blog.toObject())
+          res.render('khampha',
+          {
+            blog:mutipleMongooseToObject(blog)
+          })
+        })
+        .catch(next)
+}
+// 
+taymaytomo(req, res,next){
+        
+  // ham lay du lieu tu database
+     Blog.find({slug:"taymaytomo"})
+      // .then(blog=>res.render('home',{blog}))
+      .then(blog => {
+       // blog = blog.map(blog=>blog.toObject())
+        res.render('taymaytomo',
+        {
+          blog:mutipleMongooseToObject(blog)
+        })
+      })
+      .catch(next)
+}
+
 }
 
 // khoi tao 

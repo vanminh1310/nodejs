@@ -10,8 +10,17 @@
     <input type="text"  class="form-control" value="{{blog.img}}" name="img" >
   </div>
       <div class="form-group">
+    <label for="exampleFormControlInput1">Author</label>
+    <input type="text"  class="form-control" value="{{blog.author}}" name="author" >
+  </div>
+     <div class="form-group">
     <label for="exampleFormControlInput1">Slug</label>
-    <input type="text"  class="form-control" value="{{blog.slug}}" name="slug" >
+   <select name="slug" class="form-select" aria-label="Default select example">
+  <option id="slug">{{blog.slug}}</option>
+  <option value="cuocsong">Cuộc sống</option>
+  <option value="khampha">Khám phá</option>
+  <option value="taymaytomo">Táy máy tò mò</option>
+</select>
   </div>
      <div class="form-group">
     <label for="exampleFormControlInput1">Mô tả</label>
@@ -24,6 +33,8 @@
     <textarea class="form-control"  value="{{blog.content}}" name="content" id="mytextarea" rows="3">{{blog.content}}</textarea>
   </div>
   <br>
+  
+  <a class="btn btn-primary" href="/list">BACK</a>
   <button type="submit" class="btn btn-primary">Lưu lại</button>
 </form>
 

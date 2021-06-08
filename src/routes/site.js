@@ -5,6 +5,10 @@ const router = express.Router()
 
 
 router.get('/',homeContronller.home)
+router.get('/cuocsong',homeContronller.cuocsong)
+router.get('/khampha',homeContronller.khampha)
+router.get('/taymaytomo',homeContronller.taymaytomo)
 
+// router.get('/:slug', courseController.show);
 
 module.exports = router

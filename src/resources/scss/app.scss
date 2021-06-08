@@ -30,5 +30,46 @@ body {
   margin-left: 5%;
 }
 body{
-  background-color: #f2f3f5;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
+.logo{
+  color: #4391f0;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+.bg{
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+  
+.imgs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+// .btn-grad {background-image: linear-gradient(to right, #8e9eab 0%, #eef2f3  51%, #8e9eab  100%)}
+// .btn-grad {
+
+//    text-align: center;
+//    text-transform: uppercase;
+//    transition: 0.5s;
+//    background-size: 200% auto;
+//    color: white;            
+//    box-shadow: 0 0 20px #eee;
+//    border-radius: 10px;
+//    display: block;
+//  }
+
+//  .btn-grad:hover {
+//    background-position: right center; /* change the direction of the change here */
+//    color: #fff;
+//    text-decoration: none;
+//  }
+

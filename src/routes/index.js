@@ -1,4 +1,4 @@
-const newRouter = require('../routes/news')
+const newRouter = require('./news')
 const newsite = require('../routes/site')
 const newKH = require('../routes/kh')
 const esp = require('../routes/esp')
@@ -12,7 +12,7 @@ const list = require('./List')
       app.use('/socket', socket);
        app.use('/esp32', esp);
        app.use('/content', newKH);
-       app.use('/new', newRouter);
+       app.use('/about', newRouter);
        app.use('/home', newsite);
        app.use('/', newsite)
 
