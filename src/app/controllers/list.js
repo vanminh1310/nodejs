@@ -40,14 +40,21 @@ class homeContronller{
     }
 
     puts(req, res,next){
-
-      
-        
       Blog.updateOne({ _id: req.params.id }, req.body)
       .then(() => res.redirect('/list'))
       .catch(next);
   }
-
+// 
+tracha(req, res,next){
+  Blog.findOneAndDelete({_id: req.params.id })
+  .then((blog) =>
+      res.render('list', {
+          blog:  mongooseToObject(blog),
+      }),
+  )
+  .then(() => res.redirect('/list'))
+  .catch(next);
+}
 
    
 }

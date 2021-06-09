@@ -5,7 +5,7 @@ class creatContronller{
         res.render('creat');
     }
     postc(req, res,next){
-       res.json(req.body)
+     
        const creat = new Blog(req.body)
        creat.save()
       res.redirect('/home')
