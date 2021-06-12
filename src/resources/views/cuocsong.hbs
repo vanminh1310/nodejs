@@ -1,3 +1,18 @@
+<header class="masthead" style="background-image:url('/img/sun.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto position-relative">
+                    <div class="site-heading">
+                        <h1>Cuộc sống</h1><span class="subheading"><br>Cuộc sống của bạn chỉ thật sự ý nghĩa và trọn vẹn khi bạn biết giữ gìn và nuôi dưỡng ước mơ, biết ghi nhận, biết tin vào những lời hứa<br><br></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+ <div class="container">
+<h1>Bài viết</h1>
 <div class="mt-4">
   <div class="row">
     {{#each blog}}
@@ -12,7 +27,7 @@
               <div class="card-body">
                 <a style="text-decoration: none;" href="/content/{{this.slug}}/{{this._id}}">
                 <h5 class="card-title">{{this.title}}</h5>
-                  <p class="card-text"><small class="text-muted">{{this.nd}}</small></p>
+                  {{!-- <p class="card-text"><small class="text-muted">{{this.nd}}</small></p> --}}
                   <small class="text-muted font-monospace">Author: {{this.author}}</small></p>
                 <p class="card-text"><small class="text-muted">{{this.creatdate}}</small></p>
                 </a>
@@ -25,3 +40,4 @@
 
   </div>
 </div>
+ </div>

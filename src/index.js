@@ -14,7 +14,7 @@ var io = require("socket.io")(server);
 const {
   post
 } = require("./routes/news");
-const port = 3000;
+const port = 4000;
 var bodyParser = require('body-parser')
 // connect to db
 db.connect();

@@ -1,4 +1,4 @@
-<div class="mt-4">
+{{!-- <div class="mt-4">
   <div class="row">
     {{#each blog}}
       <div class="col-sm-6 col-lg-4 mt-5">
@@ -24,4 +24,39 @@
     {{/each}}
 
   </div>
-</div>
+</div> --}}
+  <header class="masthead" style="background-image:url('/img/home-bg.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto position-relative">
+                    <div class="site-heading">
+                        <h1>Joy Dev</h1><span class="subheading"><br>Người hạnh phúc không phải là người được sống trong hoàn cảnh thuận lợi nào mà là một người có thái độ sống tốt trước bất kỳ hoàn cảnh nào.<br><br></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+ <div class="container">
+   <h1>Bài viết mới</h1>
+        <div class="row">
+           {{#each blog}}
+            <div class="col-md-10 col-lg-8">
+             
+                <div class="post-preview"><a href="/content/{{this.slug}}/{{this._id}}">
+                        <h2 class="post-title">{{this.title}}</h2>
+                        <h6 class="post-subtitle">{{this.nd}}</h6>
+                    </a>
+                    <p class="post-meta">Author: {{this.author}}</p>
+                    <p class="card-text"><small class="text-muted">{{this.creatdate}}</small></p>
+                </div>
+                <hr>
+                
+                
+                {{!-- <div class="clearfix"><button class="btn btn-primary float-end" type="button">Older Posts&nbsp;⇒</button></div> --}}
+            </div>
+            
+            {{/each}}
+        </div>
+    </div>

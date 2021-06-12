@@ -1,5 +1,5 @@
 
-<Div class="froma">
+{{!-- <Div class="froma">
 <div style="padding: 20px;">
     <Div style="text-align: center;"><img src="{{blog.img}}" class="img-thumbnail"     alt="Responsive image"></Div>
    <br> <br> 
@@ -13,4 +13,40 @@
 </div>
 </div>
 </Div>
-{{!-- style="right:0; width: 90%;  height:40vh; --}}
+style="right:0; width: 90%;  height:40vh; --}}
+
+<header class="masthead" style="background-image:url({{blog.img}});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto position-relative">
+                    <div class="post-heading">
+                        <h1>{{blog.title}}</h1>
+                        <h5 class="subheading">{{blog.nd}}</h5>
+                        <p class="post-meta">Author: {{blog.author}}</p>
+                        <p class="post-meta">{{blog.creatdate}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                <h1>{{blog.title}}</h1>
+                   {{{blog.content}}}
+
+                  
+                   <div style="text-align: end;">
+
+                         <small style="text-align: end;" class="text-muted">{{blog.creatdate}}</small></p>
+                     <a href="/">Trở lại trang chủ</a>
+                   </div>
+                 
+                 
+                   
+                </div>
+            </div>
+        </div>
+    </article>
