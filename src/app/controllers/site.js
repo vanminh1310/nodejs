@@ -5,7 +5,7 @@ class homeContronller{
     home(req, res,next){
         
         // ham lay du lieu tu database
-           Blog.find().sort({'_id':-1}).limit(5)
+           Blog.find().sort({'_id':-1})
             // .then(blog=>res.render('home',{blog}))
             .then(blog => {
              // blog = blog.map(blog=>blog.toObject())
@@ -23,7 +23,7 @@ class homeContronller{
     cuocsong(req, res,next){
         
       // ham lay du lieu tu database
-         Blog.find({slug:"cuocsong"})
+         Blog.find({slug:"cuocsong"}).sort({'_id':-1})
           // .then(blog=>res.render('home',{blog}))
           .then(blog => {
            // blog = blog.map(blog=>blog.toObject())
@@ -38,7 +38,7 @@ class homeContronller{
   khampha(req, res,next){
         
     // ham lay du lieu tu database
-       Blog.find({slug:"khampha"})
+       Blog.find({slug:"khampha"}).sort({'_id':-1})
         // .then(blog=>res.render('home',{blog}))
         .then(blog => {
          // blog = blog.map(blog=>blog.toObject())
@@ -53,7 +53,7 @@ class homeContronller{
 taymaytomo(req, res,next){
         
   // ham lay du lieu tu database
-     Blog.find({slug:"taymaytomo"})
+     Blog.find({slug:"taymaytomo"}).sort({'_id':-1})
       // .then(blog=>res.render('home',{blog}))
       .then(blog => {
        // blog = blog.map(blog=>blog.toObject())
