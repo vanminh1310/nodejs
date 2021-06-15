@@ -5,7 +5,7 @@ class homeContronller{
     home(req, res,next){
         
         // ham lay du lieu tu database
-           Blog.find({})
+           Blog.find().sort({'_id':-1}).limit(5)
             // .then(blog=>res.render('home',{blog}))
             .then(blog => {
              // blog = blog.map(blog=>blog.toObject())
