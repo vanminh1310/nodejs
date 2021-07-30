@@ -1,0 +1,42 @@
+<header class="masthead" style="background-image:url('https://mentalself.com/wp-content/uploads/2019/09/apple-blue-background-close-up-1353366-859x639.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto position-relative">
+                    <div class="site-heading">
+                        <h1>Sức Khỏe </h1><span class="subheading"><br>“Bàn tay ta làm nên tất cả<br> Có sức người sỏi đá cũng thành cơm​" <br>“Ca dao tục ngữ"<br><br></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+ <div class="container">
+<h1>Bài viết</h1>
+<div class="mt-4">
+  <div class="row">
+    {{#each blog}}
+      <div class="col-sm-6 col-lg-4 mt-5">
+        <div class="card mb-3" style="max-width: 640px; ">
+          <div class="row g-0">
+            <div class="col-md-4">
+                 <a style="text-decoration: none;" href="/content/{{this.slug}}/{{this._id}}">
+              <img class="img-thumbnail" style="height: 30vh; "  src="{{this.img}}" alt="..." /></a>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <a style="text-decoration: none;" href="/content/{{this.slug}}/{{this._id}}">
+                <h5 class="card-title">{{this.title}}</h5>
+                  {{!-- <p class="card-text"><small class="text-muted">{{this.nd}}</small></p> --}}
+                  <small class="text-muted font-monospace">Author: {{this.author}}</small></p>
+                <p class="card-text"><small class="text-muted">{{this.creatdate}}</small></p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+
+  </div>
+</div>
+ </div>

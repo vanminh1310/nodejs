@@ -11,7 +11,6 @@ const blog = new Schema({
     creatdate: { type: Date, default: Date.now },
     update: { type: Date, default: Date.now },
   
-
   });
 
 //   them doi so dang sau de ket noi datatbase 

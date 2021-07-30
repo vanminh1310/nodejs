@@ -65,6 +65,21 @@ taymaytomo(req, res,next){
       .catch(next)
 }
 
+suckhoe(req, res,next){
+        
+  // ham lay du lieu tu database
+     Blog.find({slug:"Suc_khoe"}).sort({'_id':-1})
+      // .then(blog=>res.render('home',{blog}))
+      .then(blog => {
+       // blog = blog.map(blog=>blog.toObject())
+        res.render('suckhoe',
+        {
+          blog:mutipleMongooseToObject(blog)
+        })
+      })
+      .catch(next)
+}
+
 }
 
 // khoi tao 
